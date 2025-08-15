@@ -20,5 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Royal Game"
-include(":app")
+include(":app", ":auto", ":wear")
  
