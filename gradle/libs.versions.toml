@@ -1,6 +1,7 @@
 [versions]
 agp = "8.13.0-alpha04"
-converterMoshi = "3.0.0"
+converterGson = "3.0.0"
+gson = "2.13.1"
 hiltAndroid = "2.57"
 hiltNavigationCompose = "1.2.0"
 javapoet = "1.13.0"
@@ -13,18 +14,19 @@ lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
 composeBom = "2025.07.00"
 mavericks = "3.0.10"
-moshiKotlin = "1.15.2"
-moshiKotlinCodegen = "1.15.2"
+mockk = "1.14.5"
 playServicesLocation = "21.3.0"
 hilt = "2.57"
 retrofit = "3.0.0"
 ksp = "2.2.0-2.0.2"
+kotlinxCoroutines = "1.10.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-common = { module = "androidx.hilt:hilt-common", version.ref = "hiltNavigationCompose" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
-converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "converterMoshi" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -41,13 +43,16 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 mavericks-hilt = { module = "com.airbnb.android:mavericks-hilt", version.ref = "mavericks" }
+mavericks-compose = { module = "com.airbnb.android:mavericks-compose", version.ref = "mavericks" }
+mavericks-testing = { module = "com.airbnb.android:mavericks-testing", version.ref = "mavericks" }
 mavericks = { module = "com.airbnb.android:mavericks", version.ref = "mavericks" }
 mavericks-navigation = { module = "com.airbnb.android:mavericks-navigation", version.ref = "mavericks" }
-moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiKotlin" }
-moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiKotlinCodegen" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
