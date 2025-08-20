@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.roycemars.royalgame.core.theme.RoyalGameTheme
 import com.roycemars.royalgame.feature.list.view.ListScreen
+import com.roycemars.royalgame.feature.map.GameMapScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             RoyalGameTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    ListScreen()
+                    GameMapScreen()
                 }
             }
         }

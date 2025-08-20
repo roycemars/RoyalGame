@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +7,12 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
 }
+
+val localProperties = Properties().apply {
+    load(rootProject.file("local.properties").inputStream())
+}
+
+val mapsApiKey = localProperties.getProperty("MAPS_API_KEY") ?: ""
 
 android {
     namespace = "com.roycemars.royalgame"
@@ -18,6 +26,13 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "MAPS_API_KEY", "\"$mapsApiKey\"")
+
+        buildTypes.forEach {
+            it.buildConfigField("String", "MAPS_API_KEY", "\"$mapsApiKey\"")
+            it.manifestPlaceholders["MAPS_API_KEY"] = mapsApiKey
+        }
     }
 
     buildTypes {
@@ -44,6 +59,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -76,6 +92,14 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.gson)
     implementation(libs.converter.gson)
+
+    // Maps
+    implementation(libs.maps.compose)
+    implementation(libs.play.services.maps)
+
+    // Icons
+    implementation(libs.androidx.material.icons.core)
+    implementation(libs.material.icons.extended)
 
     // Tests
     testImplementation(libs.junit)

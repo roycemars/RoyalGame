@@ -13,13 +13,17 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
 composeBom = "2025.07.00"
+mapsCompose = "6.7.1"
 mavericks = "3.0.10"
 mockk = "1.14.5"
 playServicesLocation = "21.3.0"
 hilt = "2.57"
+playServicesMaps = "19.2.0"
 retrofit = "3.0.0"
 ksp = "2.2.0-2.0.2"
 kotlinxCoroutines = "1.10.2"
+materialIconsCore = "1.6.5"
+materialIconsExtended = "1.6.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +46,7 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
 mavericks-hilt = { module = "com.airbnb.android:mavericks-hilt", version.ref = "mavericks" }
 mavericks-compose = { module = "com.airbnb.android:mavericks-compose", version.ref = "mavericks" }
 mavericks-testing = { module = "com.airbnb.android:mavericks-testing", version.ref = "mavericks" }
@@ -50,9 +55,12 @@ mavericks-navigation = { module = "com.airbnb.android:mavericks-navigation", ver
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "materialIconsCore" }
+material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
