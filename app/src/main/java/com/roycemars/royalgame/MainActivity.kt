@@ -24,7 +24,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             RoyalGameTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    GameMapScreen()
+                    ListScreen()
+//                    GameMapScreen()
                 }
             }
         }

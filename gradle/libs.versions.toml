@@ -16,6 +16,7 @@ composeBom = "2025.07.00"
 mapsCompose = "6.7.1"
 mavericks = "3.0.10"
 mockk = "1.14.5"
+places = "4.4.1"
 playServicesLocation = "21.3.0"
 hilt = "2.57"
 playServicesMaps = "19.2.0"
@@ -54,6 +55,7 @@ mavericks = { module = "com.airbnb.android:mavericks", version.ref = "mavericks"
 mavericks-navigation = { module = "com.airbnb.android:mavericks-navigation", version.ref = "mavericks" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
+places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
